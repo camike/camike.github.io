@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>first page</h1>
+        <p></p>
+        <a href="second.html">second</a>
+    </body>
+    <script>
+        window.onpageshow=function(event) {
+            alert('first pageshow: '+event.persisted);
+        }
+        window.onpagehide=function(event) {
+            alert('first pagehide: '+event.persisted);
+        }
+        document.querySelector('p').innerText=navigator.userAgent;
+    </script>
+</html>

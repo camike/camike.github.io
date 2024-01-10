@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>second page</h1>
+    </body>
+    <script>
+        window.onpageshow=function(event) {
+            alert('second pageshow: '+event.persisted);
+        }
+        window.onpagehide=function(event) {
+            alert('second pagehide: '+event.persisted);
+        }
+        document.querySelector('p').innerText=navigator.userAgent;
+    </script>
+</html>
