@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>测试站点</title>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=0.4,maximum-scale=2,user-scalable=yes">
+    <style>
+    </style>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/hls.js/1.0.0-alpha.5/hls.min.js"></script>
+</head>
+
+<body>
+    <div>
+	    <video controls width="100%" height="300dp" id="hvideo"></video>
+    </div>
+</body>
+
+<script>
+    window.onload = function () {
+	    var video = document.getElementById("hvideo");
+	    var videoSrc = "https://vip.lz-cdn14.com/20230819/29409_355758aa/index.m3u8";
+	    var hls = new Hls();
+	    hls.loadSource(videoSrc);
+	    hls.attachMedia(video);
+    }
+</script>
+
+</html>
