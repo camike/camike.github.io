@@ -2,6 +2,7 @@
 
 <head>
     <title>测试站点</title>
+    <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=0.4,maximum-scale=2,user-scalable=yes">
     <style>
@@ -20,7 +21,10 @@
 	    var video = document.getElementById("hvideo");
 	    var videoSrc = "https://vip.lz-cdn14.com/20230819/28409_e55758aa/index.m3u8";
 
-	    var hls = new Hls();
+	    var hlsConfig = {
+		debug: true
+	    }
+	    var hls = new Hls(hlsConfig);
 	    hls.loadSource(videoSrc);
 	    hls.attachMedia(video);
     }
