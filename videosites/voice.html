@@ -10,6 +10,9 @@
             margin: 20px;
             text-size: 5em;
         }
+        b {
+            color: green;
+        }
     </style>
 </head>
 
@@ -36,14 +39,19 @@
             "https://www.freeok.vip/vodplay/13335-4-55.html",
         ];
 
+        var verified = [2, 3, 4]
+
         var root = document.querySelector("#urls");
         var container = document.createElement("ul");
-        for (var u of list) {
+        for (var i = 0; i < list.length; i++) {
             var a = document.createElement("a");
-            a.href = u;
-            a.innerText = u;
+            a.href = list[i];
+            a.innerHTML = list[i];
             var l = document.createElement("li");
             l.appendChild(a);
+            if (verified.findIndex((item, index) => { return item == i;}) > -1) {
+                l.innerHTML = l.innerHTML + " &nbsp&nbsp&nbsp <b>已验证</b>"
+            }
             container.appendChild(l);
         }
         root.appendChild(container);
